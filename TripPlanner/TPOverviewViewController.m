@@ -216,18 +216,20 @@
         [arrayOfEventsPerDay addObject:[NSMutableArray array]];
     }
     
-    for (Event *event in setOfEvents) {
-        NSMutableArray *arrayPerDay = [NSMutableArray array];
-        
-        for (NSNumber *dayOfWeek in setOfDaysAvailable) {
-            if ([event isOpenForDay: dayOfWeek]) {
-                
-                [arrayPerDay addObject:event];
+    for (Event *event in setOfEvents)
+    {
+        for (int i = 0 ; i < [setOfDaysAvailable count]; i++)
+        {
+            for (NSNumber *dayOfWeek in setOfDaysAvailable) {
+                if ([event isOpenForDay: dayOfWeek]) {
+                    if([[arrayOfEventsPerDay objectAtIndex:i] count] == 0)
+                        [[arrayOfEventsPerDay objectAtIndex:i] addObject:event];
                 break;
+                }
             }
         }
         
-        [arrayOfEventsPerDay addObject:arrayPerDay];
+        //[arrayOfEventsPerDay addObject:arrayPerDay];
     }
     
 }

@@ -236,6 +236,7 @@
         }
                               
         NSError *err = nil;
+                              
         NSPredicate *predicate = [store predicateForEventsWithStartDate:trip.startDate endDate:trip.endDate calendars:[NSArray arrayWithObject:store.defaultCalendarForNewEvents]];
         EKEvent *event  = [[store eventsMatchingPredicate:predicate] firstObject];
         [store removeEvent:event span:EKSpanThisEvent commit:YES error:&err];

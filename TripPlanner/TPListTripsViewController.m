@@ -31,7 +31,7 @@
     coreDataController = ((AppDelegate*) [UIApplication sharedApplication].delegate).coreDataController;
     arrayOfTrips = [coreDataController getAllTrips];
     
-    tableOfTrips.sectionIndexBackgroundColor = [UIColor colorWithRed:247 green:247 blue:247 alpha:1];
+     tableOfTrips.sectionIndexBackgroundColor = [UIColor colorWithRed:2 green:247 blue:247 alpha:1];
     tableOfTrips.backgroundColor = [UIColor colorWithRed:2 green:247 blue:247 alpha:1];
     // Do any additional setup after loading the view.
 }

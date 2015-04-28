@@ -43,6 +43,12 @@
 		B51B613B1AEFA4DB00D85D29 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B611E1AEFA4DB00D85D29 /* Trip.m */; };
 		B51B613C1AEFA4DB00D85D29 /* TripPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B51B611F1AEFA4DB00D85D29 /* TripPlanner.xcdatamodeld */; };
 		B51B613D1AEFA4DB00D85D29 /* WebServiceConnectionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B61221AEFA4DB00D85D29 /* WebServiceConnectionsController.m */; };
+		B59414C91AEFA92100F31D5C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B51B60D81AEFA2C000D85D29 /* MainInterface.storyboard */; };
+		B59414CA1AEFA92E00F31D5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B51B60E91AEFA4C200D85D29 /* Main.storyboard */; };
+		B5F9DB831AEFC9660018CE9E /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B60D61AEFA2C000D85D29 /* TodayViewController.m */; };
+		B5F9DB841AEFC97D0018CE9E /* TripPlanner.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = B51B611F1AEFA4DB00D85D29 /* TripPlanner.xcdatamodeld */; };
+		B5F9DB861AEFCE5D0018CE9E /* TripPlanner.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = B51B611F1AEFA4DB00D85D29 /* TripPlanner.xcdatamodeld */; };
+		B5F9DB871AEFCED10018CE9E /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B611E1AEFA4DB00D85D29 /* Trip.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -494,7 +500,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F9DB861AEFCE5D0018CE9E /* TripPlanner.xcdatamodeld in Resources */,
 				B51B61321AEFA4DB00D85D29 /* Settings.bundle in Resources */,
+				B59414C91AEFA92100F31D5C /* MainInterface.storyboard in Resources */,
 				B51B60EB1AEFA4C200D85D29 /* Main.storyboard in Resources */,
 				B51B60B41AEFA29A00D85D29 /* LaunchScreen.xib in Resources */,
 				B51B60B11AEFA29A00D85D29 /* Images.xcassets in Resources */,
@@ -512,7 +520,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F9DB841AEFC97D0018CE9E /* TripPlanner.xcdatamodeld in Resources */,
 				B51B60D91AEFA2C000D85D29 /* MainInterface.storyboard in Resources */,
+				B59414CA1AEFA92E00F31D5C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +533,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F9DB831AEFC9660018CE9E /* TodayViewController.m in Sources */,
 				B51B61271AEFA4DB00D85D29 /* Event.m in Sources */,
 				B51B61261AEFA4DB00D85D29 /* DayOpen.m in Sources */,
 				B51B612C1AEFA4DB00D85D29 /* MNCalendarViewDayCell.m in Sources */,
@@ -565,6 +576,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F9DB871AEFCED10018CE9E /* Trip.m in Sources */,
 				B51B60D71AEFA2C000D85D29 /* TodayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

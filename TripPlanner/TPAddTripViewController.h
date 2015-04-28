@@ -10,7 +10,7 @@
 
 @interface TPAddTripViewController : UIViewController
 
-@property (weak, nonatomic) NSDate *startDate;
-@property (weak, nonatomic) NSDate *endDate;
+@property (strong, nonatomic) NSDate *startDate;
+@property (strong, nonatomic) NSDate *endDate;
 
 @end
