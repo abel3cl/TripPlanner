@@ -1,0 +1,828 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B51B60A31AEFA29A00D85D29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B60A21AEFA29A00D85D29 /* main.m */; };
+		B51B60B11AEFA29A00D85D29 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B51B60B01AEFA29A00D85D29 /* Images.xcassets */; };
+		B51B60B41AEFA29A00D85D29 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B51B60B21AEFA29A00D85D29 /* LaunchScreen.xib */; };
+		B51B60C01AEFA29A00D85D29 /* TripPlannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B60BF1AEFA29A00D85D29 /* TripPlannerTests.m */; };
+		B51B60D11AEFA2BF00D85D29 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B51B60D01AEFA2BF00D85D29 /* NotificationCenter.framework */; };
+		B51B60D71AEFA2C000D85D29 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B60D61AEFA2C000D85D29 /* TodayViewController.m */; };
+		B51B60D91AEFA2C000D85D29 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B51B60D81AEFA2C000D85D29 /* MainInterface.storyboard */; };
+		B51B60DC1AEFA2C000D85D29 /* TripPlannerWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B51B60CE1AEFA2BF00D85D29 /* TripPlannerWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B51B60EB1AEFA4C200D85D29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B51B60E91AEFA4C200D85D29 /* Main.storyboard */; };
+		B51B61231AEFA4DB00D85D29 /* Acommodation.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B60ED1AEFA4DB00D85D29 /* Acommodation.m */; };
+		B51B61241AEFA4DB00D85D29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B60EF1AEFA4DB00D85D29 /* AppDelegate.m */; };
+		B51B61251AEFA4DB00D85D29 /* CoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B60F11AEFA4DB00D85D29 /* CoreDataController.m */; };
+		B51B61261AEFA4DB00D85D29 /* DayOpen.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B60F31AEFA4DB00D85D29 /* DayOpen.m */; };
+		B51B61271AEFA4DB00D85D29 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B60F51AEFA4DB00D85D29 /* Event.m */; };
+		B51B61281AEFA4DB00D85D29 /* Fligth.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B60F71AEFA4DB00D85D29 /* Fligth.m */; };
+		B51B61291AEFA4DB00D85D29 /* MNCalendarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B60FA1AEFA4DB00D85D29 /* MNCalendarHeaderView.m */; };
+		B51B612A1AEFA4DB00D85D29 /* MNCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B60FD1AEFA4DB00D85D29 /* MNCalendarView.m */; };
+		B51B612B1AEFA4DB00D85D29 /* MNCalendarViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B60FF1AEFA4DB00D85D29 /* MNCalendarViewCell.m */; };
+		B51B612C1AEFA4DB00D85D29 /* MNCalendarViewDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B61011AEFA4DB00D85D29 /* MNCalendarViewDayCell.m */; };
+		B51B612D1AEFA4DB00D85D29 /* MNCalendarViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B61031AEFA4DB00D85D29 /* MNCalendarViewLayout.m */; };
+		B51B612E1AEFA4DB00D85D29 /* MNCalendarViewWeekdayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B61051AEFA4DB00D85D29 /* MNCalendarViewWeekdayCell.m */; };
+		B51B612F1AEFA4DB00D85D29 /* MNFastDateEnumeration.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B61071AEFA4DB00D85D29 /* MNFastDateEnumeration.m */; };
+		B51B61301AEFA4DB00D85D29 /* NSDate+MNAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B61091AEFA4DB00D85D29 /* NSDate+MNAdditions.m */; };
+		B51B61311AEFA4DB00D85D29 /* MNCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B610B1AEFA4DB00D85D29 /* MNCalendarViewController.m */; };
+		B51B61321AEFA4DB00D85D29 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B51B610C1AEFA4DB00D85D29 /* Settings.bundle */; };
+		B51B61331AEFA4DB00D85D29 /* TPAddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B610E1AEFA4DB00D85D29 /* TPAddEventViewController.m */; };
+		B51B61341AEFA4DB00D85D29 /* TPAddTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B61101AEFA4DB00D85D29 /* TPAddTripViewController.m */; };
+		B51B61351AEFA4DB00D85D29 /* TPFligthAcommodationViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B61121AEFA4DB00D85D29 /* TPFligthAcommodationViewControllerViewController.m */; };
+		B51B61361AEFA4DB00D85D29 /* TPListEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B61141AEFA4DB00D85D29 /* TPListEventsViewController.m */; };
+		B51B61371AEFA4DB00D85D29 /* TPListTripsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B61161AEFA4DB00D85D29 /* TPListTripsViewController.m */; };
+		B51B61381AEFA4DB00D85D29 /* TPOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B61181AEFA4DB00D85D29 /* TPOverviewViewController.m */; };
+		B51B61391AEFA4DB00D85D29 /* TPPointOfInteresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B611A1AEFA4DB00D85D29 /* TPPointOfInteresViewController.m */; };
+		B51B613A1AEFA4DB00D85D29 /* TPWebSiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B611C1AEFA4DB00D85D29 /* TPWebSiteViewController.m */; };
+		B51B613B1AEFA4DB00D85D29 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B611E1AEFA4DB00D85D29 /* Trip.m */; };
+		B51B613C1AEFA4DB00D85D29 /* TripPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B51B611F1AEFA4DB00D85D29 /* TripPlanner.xcdatamodeld */; };
+		B51B613D1AEFA4DB00D85D29 /* WebServiceConnectionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B61221AEFA4DB00D85D29 /* WebServiceConnectionsController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B51B60BA1AEFA29A00D85D29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B51B60951AEFA29A00D85D29 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B51B609C1AEFA29A00D85D29;
+			remoteInfo = TripPlanner;
+		};
+		B51B60DA1AEFA2C000D85D29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B51B60951AEFA29A00D85D29 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B51B60CD1AEFA2BF00D85D29;
+			remoteInfo = TripPlannerWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B51B60E01AEFA2C000D85D29 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B51B60DC1AEFA2C000D85D29 /* TripPlannerWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B51B609D1AEFA29A00D85D29 /* TripPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B51B60A11AEFA29A00D85D29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B51B60A21AEFA29A00D85D29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B51B60B01AEFA29A00D85D29 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B51B60B31AEFA29A00D85D29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B51B60B91AEFA29A00D85D29 /* TripPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B51B60BE1AEFA29A00D85D29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B51B60BF1AEFA29A00D85D29 /* TripPlannerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TripPlannerTests.m; sourceTree = "<group>"; };
+		B51B60C91AEFA2AB00D85D29 /* TripPlanner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TripPlanner.entitlements; sourceTree = "<group>"; };
+		B51B60CE1AEFA2BF00D85D29 /* TripPlannerWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TripPlannerWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B51B60D01AEFA2BF00D85D29 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		B51B60D41AEFA2BF00D85D29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B51B60D51AEFA2C000D85D29 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		B51B60D61AEFA2C000D85D29 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		B51B60D81AEFA2C000D85D29 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		B51B60E11AEFA2CC00D85D29 /* TripPlannerWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TripPlannerWidget.entitlements; sourceTree = "<group>"; };
+		B51B60EA1AEFA4C200D85D29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B51B60EC1AEFA4DB00D85D29 /* Acommodation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Acommodation.h; sourceTree = "<group>"; };
+		B51B60ED1AEFA4DB00D85D29 /* Acommodation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Acommodation.m; sourceTree = "<group>"; };
+		B51B60EE1AEFA4DB00D85D29 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B51B60EF1AEFA4DB00D85D29 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B51B60F01AEFA4DB00D85D29 /* CoreDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataController.h; sourceTree = "<group>"; };
+		B51B60F11AEFA4DB00D85D29 /* CoreDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataController.m; sourceTree = "<group>"; };
+		B51B60F21AEFA4DB00D85D29 /* DayOpen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayOpen.h; sourceTree = "<group>"; };
+		B51B60F31AEFA4DB00D85D29 /* DayOpen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayOpen.m; sourceTree = "<group>"; };
+		B51B60F41AEFA4DB00D85D29 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		B51B60F51AEFA4DB00D85D29 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		B51B60F61AEFA4DB00D85D29 /* Fligth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fligth.h; sourceTree = "<group>"; };
+		B51B60F71AEFA4DB00D85D29 /* Fligth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fligth.m; sourceTree = "<group>"; };
+		B51B60F91AEFA4DB00D85D29 /* MNCalendarHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNCalendarHeaderView.h; sourceTree = "<group>"; };
+		B51B60FA1AEFA4DB00D85D29 /* MNCalendarHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNCalendarHeaderView.m; sourceTree = "<group>"; };
+		B51B60FB1AEFA4DB00D85D29 /* MNCalendarView-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MNCalendarView-Prefix.pch"; sourceTree = "<group>"; };
+		B51B60FC1AEFA4DB00D85D29 /* MNCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNCalendarView.h; sourceTree = "<group>"; };
+		B51B60FD1AEFA4DB00D85D29 /* MNCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNCalendarView.m; sourceTree = "<group>"; };
+		B51B60FE1AEFA4DB00D85D29 /* MNCalendarViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNCalendarViewCell.h; sourceTree = "<group>"; };
+		B51B60FF1AEFA4DB00D85D29 /* MNCalendarViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNCalendarViewCell.m; sourceTree = "<group>"; };
+		B51B61001AEFA4DB00D85D29 /* MNCalendarViewDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNCalendarViewDayCell.h; sourceTree = "<group>"; };
+		B51B61011AEFA4DB00D85D29 /* MNCalendarViewDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNCalendarViewDayCell.m; sourceTree = "<group>"; };
+		B51B61021AEFA4DB00D85D29 /* MNCalendarViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNCalendarViewLayout.h; sourceTree = "<group>"; };
+		B51B61031AEFA4DB00D85D29 /* MNCalendarViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNCalendarViewLayout.m; sourceTree = "<group>"; };
+		B51B61041AEFA4DB00D85D29 /* MNCalendarViewWeekdayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNCalendarViewWeekdayCell.h; sourceTree = "<group>"; };
+		B51B61051AEFA4DB00D85D29 /* MNCalendarViewWeekdayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNCalendarViewWeekdayCell.m; sourceTree = "<group>"; };
+		B51B61061AEFA4DB00D85D29 /* MNFastDateEnumeration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNFastDateEnumeration.h; sourceTree = "<group>"; };
+		B51B61071AEFA4DB00D85D29 /* MNFastDateEnumeration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNFastDateEnumeration.m; sourceTree = "<group>"; };
+		B51B61081AEFA4DB00D85D29 /* NSDate+MNAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MNAdditions.h"; sourceTree = "<group>"; };
+		B51B61091AEFA4DB00D85D29 /* NSDate+MNAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MNAdditions.m"; sourceTree = "<group>"; };
+		B51B610A1AEFA4DB00D85D29 /* MNCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNCalendarViewController.h; sourceTree = "<group>"; };
+		B51B610B1AEFA4DB00D85D29 /* MNCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNCalendarViewController.m; sourceTree = "<group>"; };
+		B51B610C1AEFA4DB00D85D29 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		B51B610D1AEFA4DB00D85D29 /* TPAddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPAddEventViewController.h; sourceTree = "<group>"; };
+		B51B610E1AEFA4DB00D85D29 /* TPAddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPAddEventViewController.m; sourceTree = "<group>"; };
+		B51B610F1AEFA4DB00D85D29 /* TPAddTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPAddTripViewController.h; sourceTree = "<group>"; };
+		B51B61101AEFA4DB00D85D29 /* TPAddTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPAddTripViewController.m; sourceTree = "<group>"; };
+		B51B61111AEFA4DB00D85D29 /* TPFligthAcommodationViewControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPFligthAcommodationViewControllerViewController.h; sourceTree = "<group>"; };
+		B51B61121AEFA4DB00D85D29 /* TPFligthAcommodationViewControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPFligthAcommodationViewControllerViewController.m; sourceTree = "<group>"; };
+		B51B61131AEFA4DB00D85D29 /* TPListEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPListEventsViewController.h; sourceTree = "<group>"; };
+		B51B61141AEFA4DB00D85D29 /* TPListEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPListEventsViewController.m; sourceTree = "<group>"; };
+		B51B61151AEFA4DB00D85D29 /* TPListTripsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPListTripsViewController.h; sourceTree = "<group>"; };
+		B51B61161AEFA4DB00D85D29 /* TPListTripsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPListTripsViewController.m; sourceTree = "<group>"; };
+		B51B61171AEFA4DB00D85D29 /* TPOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPOverviewViewController.h; sourceTree = "<group>"; };
+		B51B61181AEFA4DB00D85D29 /* TPOverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPOverviewViewController.m; sourceTree = "<group>"; };
+		B51B61191AEFA4DB00D85D29 /* TPPointOfInteresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPPointOfInteresViewController.h; sourceTree = "<group>"; };
+		B51B611A1AEFA4DB00D85D29 /* TPPointOfInteresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPPointOfInteresViewController.m; sourceTree = "<group>"; };
+		B51B611B1AEFA4DB00D85D29 /* TPWebSiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPWebSiteViewController.h; sourceTree = "<group>"; };
+		B51B611C1AEFA4DB00D85D29 /* TPWebSiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPWebSiteViewController.m; sourceTree = "<group>"; };
+		B51B611D1AEFA4DB00D85D29 /* Trip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trip.h; sourceTree = "<group>"; };
+		B51B611E1AEFA4DB00D85D29 /* Trip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trip.m; sourceTree = "<group>"; };
+		B51B61201AEFA4DB00D85D29 /* TripPlanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TripPlanner.xcdatamodel; sourceTree = "<group>"; };
+		B51B61211AEFA4DB00D85D29 /* WebServiceConnectionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceConnectionsController.h; sourceTree = "<group>"; };
+		B51B61221AEFA4DB00D85D29 /* WebServiceConnectionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceConnectionsController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B51B609A1AEFA29A00D85D29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B51B60B61AEFA29A00D85D29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B51B60CB1AEFA2BF00D85D29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B51B60D11AEFA2BF00D85D29 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B51B60941AEFA29A00D85D29 = {
+			isa = PBXGroup;
+			children = (
+				B51B609F1AEFA29A00D85D29 /* TripPlanner */,
+				B51B60BC1AEFA29A00D85D29 /* TripPlannerTests */,
+				B51B60D21AEFA2BF00D85D29 /* TripPlannerWidget */,
+				B51B60CF1AEFA2BF00D85D29 /* Frameworks */,
+				B51B609E1AEFA29A00D85D29 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B51B609E1AEFA29A00D85D29 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B51B609D1AEFA29A00D85D29 /* TripPlanner.app */,
+				B51B60B91AEFA29A00D85D29 /* TripPlannerTests.xctest */,
+				B51B60CE1AEFA2BF00D85D29 /* TripPlannerWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B51B609F1AEFA29A00D85D29 /* TripPlanner */ = {
+			isa = PBXGroup;
+			children = (
+				B51B61151AEFA4DB00D85D29 /* TPListTripsViewController.h */,
+				B51B61161AEFA4DB00D85D29 /* TPListTripsViewController.m */,
+				B51B613F1AEFA51D00D85D29 /* Model */,
+				B51B60EE1AEFA4DB00D85D29 /* AppDelegate.h */,
+				B51B60EF1AEFA4DB00D85D29 /* AppDelegate.m */,
+				B51B613E1AEFA50000D85D29 /* Controllers */,
+				B51B60F81AEFA4DB00D85D29 /* MNCalendarView */,
+				B51B61421AEFA55F00D85D29 /* AddTrip */,
+				B51B610C1AEFA4DB00D85D29 /* Settings.bundle */,
+				B51B61431AEFA57E00D85D29 /* Tab1 - Events */,
+				B51B61401AEFA53200D85D29 /* Tab2 - FlightAndAcommodation */,
+				B51B61411AEFA54600D85D29 /* Tab3 - Overview */,
+				B51B611F1AEFA4DB00D85D29 /* TripPlanner.xcdatamodeld */,
+				B51B60E91AEFA4C200D85D29 /* Main.storyboard */,
+				B51B60C91AEFA2AB00D85D29 /* TripPlanner.entitlements */,
+				B51B60B01AEFA29A00D85D29 /* Images.xcassets */,
+				B51B60B21AEFA29A00D85D29 /* LaunchScreen.xib */,
+				B51B60A01AEFA29A00D85D29 /* Supporting Files */,
+			);
+			path = TripPlanner;
+			sourceTree = "<group>";
+		};
+		B51B60A01AEFA29A00D85D29 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B51B60A11AEFA29A00D85D29 /* Info.plist */,
+				B51B60A21AEFA29A00D85D29 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B51B60BC1AEFA29A00D85D29 /* TripPlannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				B51B60BF1AEFA29A00D85D29 /* TripPlannerTests.m */,
+				B51B60BD1AEFA29A00D85D29 /* Supporting Files */,
+			);
+			path = TripPlannerTests;
+			sourceTree = "<group>";
+		};
+		B51B60BD1AEFA29A00D85D29 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B51B60BE1AEFA29A00D85D29 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B51B60CF1AEFA2BF00D85D29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B51B60D01AEFA2BF00D85D29 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B51B60D21AEFA2BF00D85D29 /* TripPlannerWidget */ = {
+			isa = PBXGroup;
+			children = (
+				B51B60E11AEFA2CC00D85D29 /* TripPlannerWidget.entitlements */,
+				B51B60D51AEFA2C000D85D29 /* TodayViewController.h */,
+				B51B60D61AEFA2C000D85D29 /* TodayViewController.m */,
+				B51B60D81AEFA2C000D85D29 /* MainInterface.storyboard */,
+				B51B60D31AEFA2BF00D85D29 /* Supporting Files */,
+			);
+			path = TripPlannerWidget;
+			sourceTree = "<group>";
+		};
+		B51B60D31AEFA2BF00D85D29 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B51B60D41AEFA2BF00D85D29 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B51B60F81AEFA4DB00D85D29 /* MNCalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				B51B60F91AEFA4DB00D85D29 /* MNCalendarHeaderView.h */,
+				B51B60FA1AEFA4DB00D85D29 /* MNCalendarHeaderView.m */,
+				B51B60FB1AEFA4DB00D85D29 /* MNCalendarView-Prefix.pch */,
+				B51B60FC1AEFA4DB00D85D29 /* MNCalendarView.h */,
+				B51B60FD1AEFA4DB00D85D29 /* MNCalendarView.m */,
+				B51B60FE1AEFA4DB00D85D29 /* MNCalendarViewCell.h */,
+				B51B60FF1AEFA4DB00D85D29 /* MNCalendarViewCell.m */,
+				B51B61001AEFA4DB00D85D29 /* MNCalendarViewDayCell.h */,
+				B51B61011AEFA4DB00D85D29 /* MNCalendarViewDayCell.m */,
+				B51B61021AEFA4DB00D85D29 /* MNCalendarViewLayout.h */,
+				B51B61031AEFA4DB00D85D29 /* MNCalendarViewLayout.m */,
+				B51B61041AEFA4DB00D85D29 /* MNCalendarViewWeekdayCell.h */,
+				B51B61051AEFA4DB00D85D29 /* MNCalendarViewWeekdayCell.m */,
+				B51B61061AEFA4DB00D85D29 /* MNFastDateEnumeration.h */,
+				B51B61071AEFA4DB00D85D29 /* MNFastDateEnumeration.m */,
+				B51B61081AEFA4DB00D85D29 /* NSDate+MNAdditions.h */,
+				B51B61091AEFA4DB00D85D29 /* NSDate+MNAdditions.m */,
+			);
+			path = MNCalendarView;
+			sourceTree = "<group>";
+		};
+		B51B613E1AEFA50000D85D29 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B51B60F01AEFA4DB00D85D29 /* CoreDataController.h */,
+				B51B60F11AEFA4DB00D85D29 /* CoreDataController.m */,
+				B51B61211AEFA4DB00D85D29 /* WebServiceConnectionsController.h */,
+				B51B61221AEFA4DB00D85D29 /* WebServiceConnectionsController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B51B613F1AEFA51D00D85D29 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B51B60EC1AEFA4DB00D85D29 /* Acommodation.h */,
+				B51B60ED1AEFA4DB00D85D29 /* Acommodation.m */,
+				B51B60F21AEFA4DB00D85D29 /* DayOpen.h */,
+				B51B60F31AEFA4DB00D85D29 /* DayOpen.m */,
+				B51B60F41AEFA4DB00D85D29 /* Event.h */,
+				B51B60F51AEFA4DB00D85D29 /* Event.m */,
+				B51B60F61AEFA4DB00D85D29 /* Fligth.h */,
+				B51B60F71AEFA4DB00D85D29 /* Fligth.m */,
+				B51B611D1AEFA4DB00D85D29 /* Trip.h */,
+				B51B611E1AEFA4DB00D85D29 /* Trip.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B51B61401AEFA53200D85D29 /* Tab2 - FlightAndAcommodation */ = {
+			isa = PBXGroup;
+			children = (
+				B51B61111AEFA4DB00D85D29 /* TPFligthAcommodationViewControllerViewController.h */,
+				B51B61121AEFA4DB00D85D29 /* TPFligthAcommodationViewControllerViewController.m */,
+			);
+			name = "Tab2 - FlightAndAcommodation";
+			sourceTree = "<group>";
+		};
+		B51B61411AEFA54600D85D29 /* Tab3 - Overview */ = {
+			isa = PBXGroup;
+			children = (
+				B51B61171AEFA4DB00D85D29 /* TPOverviewViewController.h */,
+				B51B61181AEFA4DB00D85D29 /* TPOverviewViewController.m */,
+			);
+			name = "Tab3 - Overview";
+			sourceTree = "<group>";
+		};
+		B51B61421AEFA55F00D85D29 /* AddTrip */ = {
+			isa = PBXGroup;
+			children = (
+				B51B610A1AEFA4DB00D85D29 /* MNCalendarViewController.h */,
+				B51B610B1AEFA4DB00D85D29 /* MNCalendarViewController.m */,
+				B51B610F1AEFA4DB00D85D29 /* TPAddTripViewController.h */,
+				B51B61101AEFA4DB00D85D29 /* TPAddTripViewController.m */,
+			);
+			name = AddTrip;
+			sourceTree = "<group>";
+		};
+		B51B61431AEFA57E00D85D29 /* Tab1 - Events */ = {
+			isa = PBXGroup;
+			children = (
+				B51B610D1AEFA4DB00D85D29 /* TPAddEventViewController.h */,
+				B51B610E1AEFA4DB00D85D29 /* TPAddEventViewController.m */,
+				B51B61131AEFA4DB00D85D29 /* TPListEventsViewController.h */,
+				B51B61141AEFA4DB00D85D29 /* TPListEventsViewController.m */,
+				B51B61441AEFA59F00D85D29 /* PointOfInterest */,
+			);
+			name = "Tab1 - Events";
+			sourceTree = "<group>";
+		};
+		B51B61441AEFA59F00D85D29 /* PointOfInterest */ = {
+			isa = PBXGroup;
+			children = (
+				B51B61191AEFA4DB00D85D29 /* TPPointOfInteresViewController.h */,
+				B51B611A1AEFA4DB00D85D29 /* TPPointOfInteresViewController.m */,
+				B51B611B1AEFA4DB00D85D29 /* TPWebSiteViewController.h */,
+				B51B611C1AEFA4DB00D85D29 /* TPWebSiteViewController.m */,
+			);
+			name = PointOfInterest;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B51B609C1AEFA29A00D85D29 /* TripPlanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B51B60C31AEFA29A00D85D29 /* Build configuration list for PBXNativeTarget "TripPlanner" */;
+			buildPhases = (
+				B51B60991AEFA29A00D85D29 /* Sources */,
+				B51B609A1AEFA29A00D85D29 /* Frameworks */,
+				B51B609B1AEFA29A00D85D29 /* Resources */,
+				B51B60E01AEFA2C000D85D29 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B51B60DB1AEFA2C000D85D29 /* PBXTargetDependency */,
+			);
+			name = TripPlanner;
+			productName = TripPlanner;
+			productReference = B51B609D1AEFA29A00D85D29 /* TripPlanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B51B60B81AEFA29A00D85D29 /* TripPlannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B51B60C61AEFA29A00D85D29 /* Build configuration list for PBXNativeTarget "TripPlannerTests" */;
+			buildPhases = (
+				B51B60B51AEFA29A00D85D29 /* Sources */,
+				B51B60B61AEFA29A00D85D29 /* Frameworks */,
+				B51B60B71AEFA29A00D85D29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B51B60BB1AEFA29A00D85D29 /* PBXTargetDependency */,
+			);
+			name = TripPlannerTests;
+			productName = TripPlannerTests;
+			productReference = B51B60B91AEFA29A00D85D29 /* TripPlannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B51B60CD1AEFA2BF00D85D29 /* TripPlannerWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B51B60DD1AEFA2C000D85D29 /* Build configuration list for PBXNativeTarget "TripPlannerWidget" */;
+			buildPhases = (
+				B51B60CA1AEFA2BF00D85D29 /* Sources */,
+				B51B60CB1AEFA2BF00D85D29 /* Frameworks */,
+				B51B60CC1AEFA2BF00D85D29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TripPlannerWidget;
+			productName = TripPlannerWidget;
+			productReference = B51B60CE1AEFA2BF00D85D29 /* TripPlannerWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B51B60951AEFA29A00D85D29 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = TAE;
+				TargetAttributes = {
+					B51B609C1AEFA29A00D85D29 = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = WHW5C4JA8E;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					B51B60B81AEFA29A00D85D29 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = B51B609C1AEFA29A00D85D29;
+					};
+					B51B60CD1AEFA2BF00D85D29 = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = WHW5C4JA8E;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = B51B60981AEFA29A00D85D29 /* Build configuration list for PBXProject "TripPlanner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B51B60941AEFA29A00D85D29;
+			productRefGroup = B51B609E1AEFA29A00D85D29 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B51B609C1AEFA29A00D85D29 /* TripPlanner */,
+				B51B60B81AEFA29A00D85D29 /* TripPlannerTests */,
+				B51B60CD1AEFA2BF00D85D29 /* TripPlannerWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B51B609B1AEFA29A00D85D29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B51B61321AEFA4DB00D85D29 /* Settings.bundle in Resources */,
+				B51B60EB1AEFA4C200D85D29 /* Main.storyboard in Resources */,
+				B51B60B41AEFA29A00D85D29 /* LaunchScreen.xib in Resources */,
+				B51B60B11AEFA29A00D85D29 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B51B60B71AEFA29A00D85D29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B51B60CC1AEFA2BF00D85D29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B51B60D91AEFA2C000D85D29 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B51B60991AEFA29A00D85D29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B51B61271AEFA4DB00D85D29 /* Event.m in Sources */,
+				B51B61261AEFA4DB00D85D29 /* DayOpen.m in Sources */,
+				B51B612C1AEFA4DB00D85D29 /* MNCalendarViewDayCell.m in Sources */,
+				B51B61331AEFA4DB00D85D29 /* TPAddEventViewController.m in Sources */,
+				B51B61301AEFA4DB00D85D29 /* NSDate+MNAdditions.m in Sources */,
+				B51B613D1AEFA4DB00D85D29 /* WebServiceConnectionsController.m in Sources */,
+				B51B61341AEFA4DB00D85D29 /* TPAddTripViewController.m in Sources */,
+				B51B61391AEFA4DB00D85D29 /* TPPointOfInteresViewController.m in Sources */,
+				B51B61291AEFA4DB00D85D29 /* MNCalendarHeaderView.m in Sources */,
+				B51B61381AEFA4DB00D85D29 /* TPOverviewViewController.m in Sources */,
+				B51B612A1AEFA4DB00D85D29 /* MNCalendarView.m in Sources */,
+				B51B613A1AEFA4DB00D85D29 /* TPWebSiteViewController.m in Sources */,
+				B51B61371AEFA4DB00D85D29 /* TPListTripsViewController.m in Sources */,
+				B51B61231AEFA4DB00D85D29 /* Acommodation.m in Sources */,
+				B51B612F1AEFA4DB00D85D29 /* MNFastDateEnumeration.m in Sources */,
+				B51B612B1AEFA4DB00D85D29 /* MNCalendarViewCell.m in Sources */,
+				B51B613B1AEFA4DB00D85D29 /* Trip.m in Sources */,
+				B51B61361AEFA4DB00D85D29 /* TPListEventsViewController.m in Sources */,
+				B51B613C1AEFA4DB00D85D29 /* TripPlanner.xcdatamodeld in Sources */,
+				B51B61311AEFA4DB00D85D29 /* MNCalendarViewController.m in Sources */,
+				B51B612E1AEFA4DB00D85D29 /* MNCalendarViewWeekdayCell.m in Sources */,
+				B51B612D1AEFA4DB00D85D29 /* MNCalendarViewLayout.m in Sources */,
+				B51B60A31AEFA29A00D85D29 /* main.m in Sources */,
+				B51B61251AEFA4DB00D85D29 /* CoreDataController.m in Sources */,
+				B51B61351AEFA4DB00D85D29 /* TPFligthAcommodationViewControllerViewController.m in Sources */,
+				B51B61281AEFA4DB00D85D29 /* Fligth.m in Sources */,
+				B51B61241AEFA4DB00D85D29 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B51B60B51AEFA29A00D85D29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B51B60C01AEFA29A00D85D29 /* TripPlannerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B51B60CA1AEFA2BF00D85D29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B51B60D71AEFA2C000D85D29 /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B51B60BB1AEFA29A00D85D29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B51B609C1AEFA29A00D85D29 /* TripPlanner */;
+			targetProxy = B51B60BA1AEFA29A00D85D29 /* PBXContainerItemProxy */;
+		};
+		B51B60DB1AEFA2C000D85D29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B51B60CD1AEFA2BF00D85D29 /* TripPlannerWidget */;
+			targetProxy = B51B60DA1AEFA2C000D85D29 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B51B60B21AEFA29A00D85D29 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B51B60B31AEFA29A00D85D29 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		B51B60E91AEFA4C200D85D29 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B51B60EA1AEFA4C200D85D29 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B51B60C11AEFA29A00D85D29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B51B60C21AEFA29A00D85D29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B51B60C41AEFA29A00D85D29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TripPlanner/TripPlanner.entitlements;
+				INFOPLIST_FILE = TripPlanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B51B60C51AEFA29A00D85D29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TripPlanner/TripPlanner.entitlements;
+				INFOPLIST_FILE = TripPlanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B51B60C71AEFA29A00D85D29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TripPlannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TripPlanner.app/TripPlanner";
+			};
+			name = Debug;
+		};
+		B51B60C81AEFA29A00D85D29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TripPlannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TripPlanner.app/TripPlanner";
+			};
+			name = Release;
+		};
+		B51B60DE1AEFA2C000D85D29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TripPlannerWidget/TripPlannerWidget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TripPlannerWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B51B60DF1AEFA2C000D85D29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TripPlannerWidget/TripPlannerWidget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = TripPlannerWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B51B60981AEFA29A00D85D29 /* Build configuration list for PBXProject "TripPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B51B60C11AEFA29A00D85D29 /* Debug */,
+				B51B60C21AEFA29A00D85D29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B51B60C31AEFA29A00D85D29 /* Build configuration list for PBXNativeTarget "TripPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B51B60C41AEFA29A00D85D29 /* Debug */,
+				B51B60C51AEFA29A00D85D29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B51B60C61AEFA29A00D85D29 /* Build configuration list for PBXNativeTarget "TripPlannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B51B60C71AEFA29A00D85D29 /* Debug */,
+				B51B60C81AEFA29A00D85D29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B51B60DD1AEFA2C000D85D29 /* Build configuration list for PBXNativeTarget "TripPlannerWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B51B60DE1AEFA2C000D85D29 /* Debug */,
+				B51B60DF1AEFA2C000D85D29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B51B611F1AEFA4DB00D85D29 /* TripPlanner.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B51B61201AEFA4DB00D85D29 /* TripPlanner.xcdatamodel */,
+			);
+			currentVersion = B51B61201AEFA4DB00D85D29 /* TripPlanner.xcdatamodel */;
+			path = TripPlanner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B51B60951AEFA29A00D85D29 /* Project object */;
+}
