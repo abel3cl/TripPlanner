@@ -39,8 +39,8 @@
     double myCurrencyRate;
     double localCurrencyRate;
     
-    NSMutableArray *arrayOfDaysAvailable; // days of my trip
-    NSMutableArray *arrayOfEventsPerDay;
+    NSMutableArray *arrayOfDaysAvailable; // days of my trip (Dates)
+    NSMutableArray *arrayOfEventsPerDay; // array of arrays
     NSMutableOrderedSet *setOfDaysAvailable; // days of the week 0-SUN, 6-SAT
 }
 @end
@@ -218,18 +218,25 @@
     
     for (Event *event in setOfEvents)
     {
+        BOOL inserted = NO;
+        
         for (int i = 0 ; i < [setOfDaysAvailable count]; i++)
         {
+            if(!inserted) {
             for (NSNumber *dayOfWeek in setOfDaysAvailable) {
                 if ([event isOpenForDay: dayOfWeek]) {
-                    if([[arrayOfEventsPerDay objectAtIndex:i] count] == 0)
+                    if(!inserted) {
+                        if ([[arrayOfEventsPerDay objectAtIndex:i] count] == 0) {
+                            
                         [[arrayOfEventsPerDay objectAtIndex:i] addObject:event];
-                break;
+                        inserted = YES;
+                        break;
+                        }
+                    }
                 }
             }
+            }
         }
-        
-        //[arrayOfEventsPerDay addObject:arrayPerDay];
     }
     
 }

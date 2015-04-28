@@ -10,8 +10,8 @@
 
 @interface MNCalendarViewController : UIViewController
 
-@property (weak, nonatomic) NSDate *startDate;
-@property (weak, nonatomic) NSDate *endDate;
+@property (strong, nonatomic) NSDate *startDate;
+@property (strong, nonatomic) NSDate *endDate;
 @property (weak, nonatomic) id sender;
 
 @end

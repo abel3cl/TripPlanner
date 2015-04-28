@@ -57,12 +57,13 @@
 }
 
 - (BOOL)calendarView:(MNCalendarView *)calendarView shouldSelectDate:(NSDate *)date {
-    if([date compare: currentDate] < 0)
+    
+    if([date  compare: currentDate] < 0)
         return NO;
     
     // If user's choosing endDate. User cannot choose a date before startDate
     if([[_sender valueForKey:@"tag"] isEqualToNumber:@101]) {
-        if([date compare: _startDate] < 0) 
+        if([date compare: [_startDate dateByAddingTimeInterval:1*24*60*60]] < 0)
             return NO;
     }
     return YES;
@@ -71,7 +72,7 @@
 -(void) updateEndDate
 {
     // If the new startDate is greater that endDate
-    if ([_endDate compare:_startDate] < 0) {
+    if ([_endDate compare:_startDate] <= 0) {
         _endDate = [_startDate dateByAddingTimeInterval:1*24*60*60];
     }
 }
