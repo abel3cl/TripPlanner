@@ -24,7 +24,6 @@
     currentDate = [NSDate date];
     calendarView = [[MNCalendarView alloc] initWithFrame:self.view.bounds];
     calendarView.calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    calendarView.selectedDate = [NSDate date];
     calendarView.delegate = self;
     calendarView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     calendarView.backgroundColor = UIColor.whiteColor;

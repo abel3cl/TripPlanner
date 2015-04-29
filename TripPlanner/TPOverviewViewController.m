@@ -140,19 +140,50 @@
 #pragma mark - Button share Social Media
 - (IBAction)btnShare:(id)sender
 {
-    SLComposeViewController *slvc;
-    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
-        slvc = [[SLComposeViewController alloc] init];
-        slvc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-        [slvc setInitialText: [NSString stringWithFormat:@"I'm about to make a trip to %@",_actualTrip.destination]];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Share" message:@"Choose a social network" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *facebook = [UIAlertAction actionWithTitle:@"Facebook" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction *action) {
         
-        [self presentViewController:slvc animated:YES completion:nil];
+        SLComposeViewController *slvc;
+        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+            slvc = [[SLComposeViewController alloc] init];
+            slvc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+            [slvc setInitialText: [NSString stringWithFormat:@"I'm about to make a trip to %@",_actualTrip.destination]];
+            
+            [self presentViewController:slvc animated:YES completion:nil];
+        }
+        else{
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Failed!" message:@"You need a set up Facebook account" preferredStyle:(UIAlertControllerStyleAlert)];
+            
+            [alert addAction: [UIAlertAction actionWithTitle:@"OK" style:(UIAlertActionStyleDefault) handler:nil]];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+
+    }];
+    
+    UIAlertAction *twitter = [UIAlertAction actionWithTitle:@"Twitter" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction *action) {
+        SLComposeViewController *slvc;
+        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+            slvc = [[SLComposeViewController alloc] init];
+            slvc = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+            [slvc setInitialText: [NSString stringWithFormat:@"I'm about to make a trip to %@",_actualTrip.destination]];
+            
+            [self presentViewController:slvc animated:YES completion:nil];
+        }
+        else{
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Failed!" message:@"You need a set up Twitter account" preferredStyle:(UIAlertControllerStyleAlert)];
+            
+            [alert addAction: [UIAlertAction actionWithTitle:@"OK" style:(UIAlertActionStyleDefault) handler:nil]];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+
+    }];
+    [alertController addAction:facebook]; [alertController addAction:twitter];
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        UIPopoverController *popOverController = [[UIPopoverController alloc] initWithContentViewController:alertController];
+        [popOverController presentPopoverFromBarButtonItem:sender permittedArrowDirections:(UIPopoverArrowDirectionUp) animated:YES];
     }
-    else{
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Failed!" message:@"You need a set up Facebook account" preferredStyle:(UIAlertControllerStyleAlert)];
-        
-        [alert addAction: [UIAlertAction actionWithTitle:@"OK" style:(UIAlertActionStyleDefault) handler:nil]];
-        [self presentViewController:alert animated:YES completion:nil];
+    else {
+        [self presentViewController:alertController animated:YES completion:nil];
     }
 }
 

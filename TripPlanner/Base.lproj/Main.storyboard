@@ -52,6 +52,15 @@
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="88y-SM-yAn">
                                 <rect key="frame" x="16" y="154" width="343" height="295"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <tableView key="tableFooterView" hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="D00-Qe-voy">
+                                    <rect key="frame" x="16" y="154" width="343" height="295"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <outlet property="dataSource" destination="eS5-0V-jYe" id="Ktc-hk-HLq"/>
+                                        <outlet property="delegate" destination="eS5-0V-jYe" id="kvQ-7n-I6P"/>
+                                    </connections>
+                                </tableView>
                                 <connections>
                                     <outlet property="dataSource" destination="eS5-0V-jYe" id="jUg-5h-iVb"/>
                                     <outlet property="delegate" destination="eS5-0V-jYe" id="de3-Dq-ZdJ"/>
