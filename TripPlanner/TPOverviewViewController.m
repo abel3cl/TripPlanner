@@ -223,23 +223,22 @@
         for (int i = 0 ; i < [setOfDaysAvailable count]; i++)
         {
             if(!inserted) {
-            for (NSNumber *dayOfWeek in setOfDaysAvailable) {
-                if ([event isOpenForDay: dayOfWeek]) {
-                    if(!inserted) {
-                        if ([[arrayOfEventsPerDay objectAtIndex:i] count] == 0) {
-                            [[arrayOfEventsPerDay objectAtIndex:i] addObject:event];
-                        inserted = YES;
-                        break;
+                for (NSNumber *dayOfWeek in setOfDaysAvailable) {
+                    if ([event isOpenForDay: dayOfWeek]) {
+                        if(!inserted) {
+                            if ([[arrayOfEventsPerDay objectAtIndex:i] count] == 0) {
+                                [[arrayOfEventsPerDay objectAtIndex:i] addObject:event];
+                                inserted = YES;
+                                break;
+                            }
                         }
                     }
                 }
-            }
             }
         }
         if(!inserted)
         {
             [[arrayOfEventsPerDay objectAtIndex:[arrayOfEventsPerDay count] -1] addObject:event];
-            NSLog(@"No possible to insert: %@", event.name);
         }
     }
     

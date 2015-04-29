@@ -59,8 +59,15 @@
     NSString *photoReference = [[[[pointsOfInterest objectAtIndex:indexPath.section] valueForKey:@"photos"] objectAtIndex:0] valueForKey:@"photo_reference"];
 
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/photo?maxwidth=150&photoreference=%@&key=AIzaSyDUVL8CoRS2Y2ALgyl9l1IkHD1tYre_THc",photoReference]];
-    
-    [cell setBackgroundView: [[UIImageView alloc] initWithImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:url]]]];
+    if(photoReference)
+    {
+        [cell setBackgroundView: [[UIImageView alloc] initWithImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:url]]]];
+        cell.textLabel.text = @"";
+    }
+    else{
+        [cell setBackgroundView: [[UIView alloc] init]];
+        cell.textLabel.text = @"No photo available";
+    }
     
     return cell;
 }

@@ -186,7 +186,7 @@
 - (IBAction)btnSave:(id)sender {
     if (_pointOfInterest) {
         NSNumber *price = [NSNumber numberWithFloat: [txtPriceOfPoint.text floatValue]];
-        
+        UIViewController * __weak weakSelf = self;
         [coreDataController addEvent: _pointOfInterest withPeriods: periods withPrice:price forTrip:_actualTrip completion:^{
             
             UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Added!" message:@"Event added" preferredStyle:UIAlertControllerStyleAlert];
@@ -195,7 +195,7 @@
                                                                   handler:^(UIAlertAction * action) {}];
             
             [alert addAction:defaultAction];
-            [self presentViewController:alert animated:YES completion:nil];
+            [weakSelf presentViewController:alert animated:YES completion:nil];
         }];
         _pointOfInterest = nil;
         [self clearFields];
@@ -251,7 +251,16 @@
     NSString *hourClosingEveningSelected =  txtHourClosingEveningOfPoint.text;
     
     NSUInteger index = [sgmDays selectedSegmentIndex];
-    
+    if ([hourOpeningMorningSelected isEqualToString:@""] || [hourClosingMorningSelected isEqualToString:@""]) {
+        UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Incomplete" message:@"Day must be at least one opening and closing hour" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                              handler:nil];
+        
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    else {
     NSDictionary *openMorning = [NSDictionary dictionaryWithObjectsAndKeys: [NSNumber numberWithInt:index],@"day",hourOpeningMorningSelected,@"time", nil];
     NSDictionary *closeMorning = [NSDictionary dictionaryWithObjectsAndKeys: [NSNumber numberWithInt:index],@"day",hourClosingMorningSelected,@"time", nil];
     NSDictionary *openEvening = [NSDictionary dictionaryWithObjectsAndKeys: [NSNumber numberWithInt:index],@"day",hourOpeningEveningSelected,@"time", nil];
@@ -273,13 +282,14 @@
     
     [periods addObjectsFromArray:period];
     
-    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Added" message:@"added" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Added" message:@"" preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
                                                           handler:nil];
     
     [alert addAction:defaultAction];
     [self presentViewController:alert animated:YES completion:nil];
+    }
 }
 
 #pragma mark - Other Methods

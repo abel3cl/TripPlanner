@@ -113,7 +113,7 @@
     
     if(![managedObjectContext save:&errorSaving])
     {
-        NSLog(@"Error saving fligthAcommodation %@ %@", errorSaving, [errorSaving localizedDescription]);
+        NSLog(@"Error saving flightAcommodation %@ %@", errorSaving, [errorSaving localizedDescription]);
     }
     callback();
 }
