@@ -251,17 +251,21 @@
     }
     
     [arrayOfEventsPerDay addObject:[NSMutableArray array]]; // Events without date, last position
+    
     for (Event *event in setOfEvents)
     {
+        // Controls that a day doesn't have lots of events and another day just a few
+        int max = [[arrayOfEventsPerDay objectAtIndex:[arrayOfDaysAvailable count] -1] count];
+        
         BOOL inserted = NO;
         
-        for (int i = 0 ; i < [setOfDaysAvailable count]; i++)
+        for (int i = 0 ; i < [arrayOfDaysAvailable count]; i++)
         {
             if(!inserted) {
                 for (NSNumber *dayOfWeek in setOfDaysAvailable) {
                     if ([event isOpenForDay: dayOfWeek]) {
                         if(!inserted) {
-                            if ([[arrayOfEventsPerDay objectAtIndex:i] count] == 0) {
+                            if ([[arrayOfEventsPerDay objectAtIndex:i] count] <= max) {
                                 [[arrayOfEventsPerDay objectAtIndex:i] addObject:event];
                                 inserted = YES;
                                 break;
@@ -271,14 +275,20 @@
                 }
             }
         }
+        // Event has no dates inserted
         if(!inserted)
         {
             [[arrayOfEventsPerDay objectAtIndex:[arrayOfEventsPerDay count] -1] addObject:event];
         }
     }
     
+    [self sortArrays];
 }
+-(void) sortArrays
+{
 
+    
+}
 #pragma mark - UITableViewDataSource & Delegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
