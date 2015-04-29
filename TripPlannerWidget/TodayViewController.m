@@ -49,7 +49,10 @@
         NSString *stringDate = [_dateFormatter stringFromDate:startDate];
         [lblStartDate setText: stringDate ];
     }
-
+    else {
+        [lblTripDestination setText:@"There's no trips coming up"];
+        [lblStartDate setHidden:YES];
+    }
     completionHandler(NCUpdateResultNewData);
 }
 
@@ -138,7 +141,7 @@
 -(NSArray*) getAllTrips{
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]init];
     
-    NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"destination" ascending:YES];
+    NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"startDate" ascending:YES];
     NSArray *descriptors = [NSArray arrayWithObject:descriptor];
     [fetchRequest setSortDescriptors:descriptors];
     

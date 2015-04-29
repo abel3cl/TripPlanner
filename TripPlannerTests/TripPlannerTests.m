@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "WebServiceConnectionsController.h"
 
 @interface TripPlannerTests : XCTestCase
 
@@ -36,5 +37,6 @@
         // Put the code you want to measure the time of here.
     }];
 }
+
 
 @end

@@ -28,10 +28,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     coreDataController = ((AppDelegate*) [UIApplication sharedApplication].delegate).coreDataController;
     arrayOfTrips = [coreDataController getAllTrips];
     
-     tableOfTrips.sectionIndexBackgroundColor = [UIColor colorWithRed:2 green:247 blue:247 alpha:1];
     tableOfTrips.backgroundColor = [UIColor colorWithRed:2 green:247 blue:247 alpha:1];
     // Do any additional setup after loading the view.
 }
@@ -81,11 +81,8 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:cellIdentifier];
     }
+
     
-    cell.backgroundColor = [UIColor whiteColor];
-    cell.layer.borderColor = [[UIColor lightGrayColor] CGColor];
-    cell.layer.borderWidth = 1;
-    cell.layer.cornerRadius = 5;
     cell.textLabel.text = ((Trip*)[arrayOfTrips objectAtIndex:indexPath.section]).destination;
     
     return cell;
@@ -110,6 +107,22 @@
     return 10;
 }
 
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    cell.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+    cell.layer.borderWidth = 1;
+    cell.layer.cornerRadius = 5;
+    
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc] init];
+    [view setBackgroundColor:[UIColor whiteColor]];
+    return view;
+}
+
+
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"showTripSegue"]) {
@@ -125,30 +138,6 @@
         [TPOverviewVC setActualTrip:[arrayOfTrips objectAtIndex:indexPath.section]];
         [TPFligthAcommodationViewControllerVC setActualTrip:[arrayOfTrips objectAtIndex:indexPath.section]];
     }
-}
-
-- (IBAction)btnSettings:(id)sender
-{
-    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Currency" message:@"Choose a currency" preferredStyle:UIAlertControllerStyleAlert];
-    [alert addTextFieldWithConfigurationHandler:^(UITextField *textField)
-    {
-        [textField addTarget:self action:@selector(valueAdded:) forControlEvents:UIControlEventEditingDidEnd];
-    }];
-    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel
-        handler:^(UIAlertAction * action) {}];
-    
-    [alert addAction:defaultAction];
-    [self presentViewController:alert animated:YES completion:nil];
-    
-}
-
--(void) valueAdded: (UITextField*) sender
-{
-    NSLog(@"%@",sender.text);
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
-    [defaults synchronize];
-    
 }
 
 @end

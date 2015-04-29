@@ -75,7 +75,16 @@
     NSNumber *priceFligth = [NSNumber numberWithFloat: [txtPriceFligth.text doubleValue]];
     NSNumber *priceAcommodation = [NSNumber numberWithFloat: [txtPriceAcommodation.text doubleValue]];
     
-    [coreDataController updateTrip: _actualTrip withPriceOfFligth: priceFligth withCurrency: currencyOfFligth priceOfAcommodation: priceAcommodation withCurrency: currencyOfAcommodation];
+    [coreDataController updateTrip: _actualTrip withPriceOfFligth: priceFligth withCurrency: currencyOfFligth priceOfAcommodation: priceAcommodation withCurrency: currencyOfAcommodation completion:^{
+        
+        UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Updated!" message:@"Prices updated" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) {}];
+        
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
+    }];
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField

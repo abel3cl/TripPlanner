@@ -215,7 +215,7 @@
     for (NSNumber *day in setOfDaysAvailable) {
         [arrayOfEventsPerDay addObject:[NSMutableArray array]];
     }
-    
+    [arrayOfEventsPerDay addObject:[NSMutableArray array]]; // Events without date, last position
     for (Event *event in setOfEvents)
     {
         BOOL inserted = NO;
@@ -237,6 +237,11 @@
             }
             }
         }
+        if(!inserted)
+        {
+            [[arrayOfEventsPerDay objectAtIndex:[arrayOfEventsPerDay count] -1] addObject:event];
+            NSLog(@"No possible to insert: %@", event.name);
+        }
     }
     
 }
@@ -244,7 +249,7 @@
 #pragma mark - UITableViewDataSource & Delegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [arrayOfDaysAvailable count];
+    return [arrayOfDaysAvailable count] +1;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -267,10 +272,13 @@
 }
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-        NSDateFormatter *_dateFormatter = [[NSDateFormatter alloc] init];
-        [_dateFormatter setTimeZone:[NSTimeZone defaultTimeZone]];
-        [_dateFormatter setDateFormat:@"EEEE: dd-MM-yyyy"];
-        NSString *stringDate = [_dateFormatter stringFromDate:[arrayOfDaysAvailable objectAtIndex:section]];
+    if (section == [arrayOfEventsPerDay count] -1) {
+        return @"Not possible to schedule this events";
+    }
+    NSDateFormatter *_dateFormatter = [[NSDateFormatter alloc] init];
+    [_dateFormatter setTimeZone:[NSTimeZone defaultTimeZone]];
+    [_dateFormatter setDateFormat:@"EEEE: dd-MM-yyyy"];
+    NSString *stringDate = [_dateFormatter stringFromDate:[arrayOfDaysAvailable objectAtIndex:section]];
 
     return stringDate;
 }

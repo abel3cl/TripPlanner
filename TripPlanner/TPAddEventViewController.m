@@ -187,7 +187,7 @@
     if (_pointOfInterest) {
         NSNumber *price = [NSNumber numberWithFloat: [txtPriceOfPoint.text floatValue]];
         
-        [coreDataController addEvent: _pointOfInterest withPeriods: periods withPrice:price forTrip:_actualTrip];
+        [coreDataController addEvent: _pointOfInterest withPeriods: periods withPrice:price forTrip:_actualTrip] ;
         _pointOfInterest = nil;
         [self clearFields];
         [self enableTextFields];
@@ -297,6 +297,11 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [txtNameOfPoint resignFirstResponder];
+    [txtPriceOfPoint resignFirstResponder];
+    [txtHourOpeningMorningOfPoint resignFirstResponder];
+    [txtHourClosingMorningOfPoint resignFirstResponder];
+    [txtHourOpeningEveningOfPoint resignFirstResponder];
+    [txtHourClosingEveningOfPoint resignFirstResponder];
     [tableOfAutocompletePointOfInterest setHidden:YES];
 }
 @end

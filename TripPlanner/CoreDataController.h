@@ -21,6 +21,6 @@
            withCodeCountry: (NSString*) codeCountry;
 -(NSArray*) getAllTrips;
 -(void) addEvent: (NSDictionary*) event withPeriods: (NSMutableArray*) periods withPrice: (NSNumber*) price forTrip:(Trip*) trip;
--(void) updateTrip: (Trip*) trip withPriceOfFligth: (NSNumber*) priceFligth withCurrency: (NSString*) currencyOfFligth priceOfAcommodation: (NSNumber*) priceAcommodation withCurrency: (NSString*) currencyOfAcommodation;
+-(void) updateTrip: (Trip*) trip withPriceOfFligth: (NSNumber*) priceFligth withCurrency: (NSString*) currencyOfFligth priceOfAcommodation: (NSNumber*) priceAcommodation withCurrency: (NSString*) currencyOfAcommodation completion: (void(^)(void)) callback;;
 -(void) deleteTrip: (Trip*) trip;
 @end

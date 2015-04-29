@@ -96,7 +96,7 @@
     return fetchedResultsController.fetchedObjects;
 }
 
--(void) updateTrip: (Trip*) trip withPriceOfFligth: (NSNumber*) priceFligth withCurrency: (NSString*) currencyOfFligth priceOfAcommodation: (NSNumber*) priceAcommodation withCurrency: (NSString*) currencyOfAcommodation
+-(void) updateTrip: (Trip*) trip withPriceOfFligth: (NSNumber*) priceFligth withCurrency: (NSString*) currencyOfFligth priceOfAcommodation: (NSNumber*) priceAcommodation withCurrency: (NSString*) currencyOfAcommodation completion: (void(^)(void)) callback;
 {
     Fligth* fligthEntity = (Fligth*)[NSEntityDescription insertNewObjectForEntityForName:@"Fligth" inManagedObjectContext:managedObjectContext];
     
@@ -115,6 +115,7 @@
     {
         NSLog(@"Error saving fligthAcommodation %@ %@", errorSaving, [errorSaving localizedDescription]);
     }
+    callback();
 }
 
 #pragma mark - Event Methods
