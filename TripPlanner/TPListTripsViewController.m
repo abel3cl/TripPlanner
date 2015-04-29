@@ -112,7 +112,6 @@
     cell.layer.borderColor = [[UIColor lightGrayColor] CGColor];
     cell.layer.borderWidth = 1;
     cell.layer.cornerRadius = 5;
-    
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section

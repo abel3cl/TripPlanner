@@ -177,7 +177,10 @@
         }
 
     }];
-    [alertController addAction:facebook]; [alertController addAction:twitter];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:(UIAlertActionStyleCancel) handler:nil];
+    [alertController addAction:facebook];
+    [alertController addAction:twitter];
+    [alertController addAction:cancel];
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         UIPopoverController *popOverController = [[UIPopoverController alloc] initWithContentViewController:alertController];
         [popOverController presentPopoverFromBarButtonItem:sender permittedArrowDirections:(UIPopoverArrowDirectionUp) animated:YES];
@@ -243,9 +246,10 @@
 {
     NSArray *setOfEvents = [_actualTrip.events allObjects];
     
-    for (NSNumber *day in setOfDaysAvailable) {
+    for (NSNumber *day in arrayOfDaysAvailable) {
         [arrayOfEventsPerDay addObject:[NSMutableArray array]];
     }
+    
     [arrayOfEventsPerDay addObject:[NSMutableArray array]]; // Events without date, last position
     for (Event *event in setOfEvents)
     {
@@ -296,20 +300,24 @@
     }
     
     cell.textLabel.text = [[[arrayOfEventsPerDay objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] name];
+
     return cell;
     
 }
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    if (section == [arrayOfEventsPerDay count] -1) {
+    if (section > [arrayOfDaysAvailable count] - 1) {
         return @"Not possible to schedule this events";
-    }
-    NSDateFormatter *_dateFormatter = [[NSDateFormatter alloc] init];
-    [_dateFormatter setTimeZone:[NSTimeZone defaultTimeZone]];
-    [_dateFormatter setDateFormat:@"EEEE: dd-MM-yyyy"];
-    NSString *stringDate = [_dateFormatter stringFromDate:[arrayOfDaysAvailable objectAtIndex:section]];
+    } else {
+        NSDateFormatter *_dateFormatter = [[NSDateFormatter alloc] init];
+        [_dateFormatter setTimeZone:[NSTimeZone defaultTimeZone]];
+        [_dateFormatter setDateFormat:@"EEEE: dd-MM-yyyy"];
+    
+        NSString *stringDate = [_dateFormatter stringFromDate:[arrayOfDaysAvailable objectAtIndex:section]];
 
-    return stringDate;
+        return stringDate;
+    }
+    
 }
 
 #pragma mark - Action to Gesture

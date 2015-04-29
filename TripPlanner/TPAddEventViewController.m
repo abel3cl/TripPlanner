@@ -56,6 +56,7 @@
     [btnSave.layer setBorderColor: [[UIColor blueColor] CGColor]];
     [btnSave.layer setCornerRadius:3.0];
     txtPriceOfPoint.placeholder = [txtPriceOfPoint.placeholder stringByAppendingString:_actualTrip.currency];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -244,7 +245,6 @@
 
 - (IBAction)btnAdd:(id)sender
 {
-    
     NSString *hourOpeningMorningSelected =  txtHourOpeningMorningOfPoint.text;
     NSString *hourClosingMorningSelected =  txtHourClosingMorningOfPoint.text;
     NSString *hourOpeningEveningSelected =  txtHourOpeningEveningOfPoint.text;

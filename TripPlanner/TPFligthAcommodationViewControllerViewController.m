@@ -31,6 +31,16 @@
     coreDataController = ((AppDelegate*) [UIApplication sharedApplication].delegate).coreDataController;
 
     // Do any additional setup after loading the view.
+
+    
+    [btnSave.layer setBorderWidth:1.0];
+    [btnSave.layer setBorderColor: [[UIColor blueColor] CGColor]];
+    [btnSave.layer setCornerRadius:3.0];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    // Set titles of the currencies
     [sgmPriceAcommodation removeAllSegments];
     [sgmPriceAcommodation insertSegmentWithTitle:[[NSUserDefaults standardUserDefaults]  valueForKey:@"mycurrency_preference"] atIndex:0 animated:NO];
     [sgmPriceAcommodation insertSegmentWithTitle:_actualTrip.currency atIndex:1 animated:NO];
@@ -41,10 +51,7 @@
     [sgmPriceFligth insertSegmentWithTitle:_actualTrip.currency atIndex:1 animated:NO];
     [sgmPriceFligth setSelectedSegmentIndex:0];
     
-    [btnSave.layer setBorderWidth:1.0];
-    [btnSave.layer setBorderColor: [[UIColor blueColor] CGColor]];
-    [btnSave.layer setCornerRadius:3.0];
-    
+    // Set selected currencies and prices
     if(_actualTrip.acommodation.price != nil)
     {
         txtPriceAcommodation.text = [NSString stringWithFormat:@"%@",_actualTrip.acommodation.price];
@@ -58,8 +65,6 @@
             [sgmPriceFligth setSelectedSegmentIndex:0];
         else [sgmPriceFligth setSelectedSegmentIndex:1];
     }
-    
- 
 }
 
 - (void)didReceiveMemoryWarning {

@@ -322,7 +322,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price in local currency " minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zHQ-aJ-YYh">
-                                <rect key="frame" x="16" y="200" width="343" height="30"/>
+                                <rect key="frame" x="16" y="206" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
@@ -397,7 +397,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFh-w4-aNm">
-                                <rect key="frame" x="138" y="521" width="98" height="30"/>
+                                <rect key="frame" x="138" y="520" width="98" height="30"/>
                                 <state key="normal" title="Save Event">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -500,15 +500,15 @@
                                     <outlet property="delegate" destination="m0j-iS-UYK" id="FGh-zk-u1L"/>
                                 </connections>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="O6u-Zl-nQS">
-                                <rect key="frame" x="0.0" y="324" width="375" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="oWM-VN-mrH">
+                                <rect key="frame" x="177" y="324" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="aTu-SZ-Umu"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="O6u-Zl-nQS" id="J0I-LX-hRr"/>
+                        <outlet property="activityIndicator" destination="oWM-VN-mrH" id="5bk-V5-7Xz"/>
                         <outlet property="tableOfPointsOfInterest" destination="kIc-lh-8l3" id="6IK-LK-x2W"/>
                     </connections>
                 </viewController>

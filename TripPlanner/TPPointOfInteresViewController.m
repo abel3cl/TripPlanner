@@ -30,6 +30,7 @@
     webServiceCC = ((AppDelegate*)[UIApplication sharedApplication].delegate).webServiceController;
     [activityIndicator setHidesWhenStopped:YES];
     [webServiceCC getPointOfInterestForLat:[_actualTrip.latitude doubleValue] withLng: [_actualTrip.longitude doubleValue]];
+    
 }
 -(void)viewWillAppear:(BOOL)animated{
     [activityIndicator startAnimating];
