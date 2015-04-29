@@ -87,9 +87,6 @@
         [_actualTrip.managedObjectContext save:nil];
         [tableView reloadData];
     }
-    
-    [tableView resignFirstResponder];
-    
 }
 
 #pragma mark - Button Back

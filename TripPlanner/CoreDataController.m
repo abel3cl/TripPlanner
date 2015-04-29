@@ -119,7 +119,7 @@
 }
 
 #pragma mark - Event Methods
--(void) addEvent: (NSDictionary*) event withPeriods: (NSMutableArray*) periodsM withPrice: (NSNumber*) price forTrip:(Trip *) trip
+-(void) addEvent: (NSDictionary*) event withPeriods: (NSMutableArray*) periodsM withPrice: (NSNumber*) price forTrip:(Trip *) trip completion: (void(^)(void)) callback
 {
     Event* eventEntity = (Event*)[NSEntityDescription insertNewObjectForEntityForName:@"Event" inManagedObjectContext:managedObjectContext];
     
@@ -202,6 +202,7 @@
     {
         NSLog(@"Error saving event %@ %@", errorSaving, [errorSaving localizedDescription]);
     }
+    callback();
 }
 
 #pragma mark - EventKit

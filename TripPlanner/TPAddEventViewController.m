@@ -187,7 +187,16 @@
     if (_pointOfInterest) {
         NSNumber *price = [NSNumber numberWithFloat: [txtPriceOfPoint.text floatValue]];
         
-        [coreDataController addEvent: _pointOfInterest withPeriods: periods withPrice:price forTrip:_actualTrip] ;
+        [coreDataController addEvent: _pointOfInterest withPeriods: periods withPrice:price forTrip:_actualTrip completion:^{
+            
+            UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Added!" message:@"Event added" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                                  handler:^(UIAlertAction * action) {}];
+            
+            [alert addAction:defaultAction];
+            [self presentViewController:alert animated:YES completion:nil];
+        }];
         _pointOfInterest = nil;
         [self clearFields];
         [self enableTextFields];
@@ -264,6 +273,13 @@
     
     [periods addObjectsFromArray:period];
     
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Added" message:@"added" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                          handler:nil];
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 #pragma mark - Other Methods
