@@ -57,13 +57,11 @@
     }
     //cell.textLabel.text = [[pointsOfInterest objectAtIndex:indexPath.section] valueForKey:@"name"];
     NSString *photoReference = [[[[pointsOfInterest objectAtIndex:indexPath.section] valueForKey:@"photos"] objectAtIndex:0] valueForKey:@"photo_reference"];
-#warning call to details for photo and hours
+
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/photo?maxwidth=150&photoreference=%@&key=AIzaSyDUVL8CoRS2Y2ALgyl9l1IkHD1tYre_THc",photoReference]];
-    //cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[[myTrips objectAtIndex:indexPath.row] description]]];
-    [cell.backgroundView setAlpha:0.4];
-#warning change this for connection
+    
     [cell setBackgroundView: [[UIImageView alloc] initWithImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:url]]]];
-    //[cell.imageView setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:url]]];
+    
     return cell;
 }
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section

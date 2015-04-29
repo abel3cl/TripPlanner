@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "WebServiceConnectionsController.h"
+#import "Event.h"
+#import "AppDelegate.h"
+#import "DayOpen.h"
 
 @interface TripPlannerTests : XCTestCase
 
@@ -36,6 +38,30 @@
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
     }];
+}
+
+-(void) testIsOpenForDay
+{
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    
+    // Example Event
+    Event *eventEntity = (Event*)[NSEntityDescription insertNewObjectForEntityForName:@"Event" inManagedObjectContext:appDelegate.managedObjectContext];
+    DayOpen* dayOpenEntity = (DayOpen*)[NSEntityDescription insertNewObjectForEntityForName:@"DayOpen" inManagedObjectContext:appDelegate.managedObjectContext];
+    
+    dayOpenEntity.event = eventEntity;
+    dayOpenEntity.dayOfWeek = @0;
+    dayOpenEntity.hourOpeningMorning = [NSDate date];
+    dayOpenEntity.hourClosingMorning= [NSDate dateWithTimeIntervalSinceNow:1*24*60*60];
+    
+    NSSet *setOfDaysOpen = [NSSet setWithObject:dayOpenEntity];
+    eventEntity.daysOpen = setOfDaysOpen;
+    
+    BOOL openOnDay = [eventEntity isOpenForDay:@0];
+    
+    
+    XCTAssertEqual(openOnDay, YES);
+    
+    XCTAssertEqualObjects(eventEntity.daysOpen, setOfDaysOpen);
 }
 
 

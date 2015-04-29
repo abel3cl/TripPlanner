@@ -301,7 +301,7 @@
     
     [self.view addConstraints:constraints_SIZE_V];
     
-    // Pin tableOfNameOfCities to txtDestination
+    // Pin tableOfNameOfCities to txtDestination POS
     constraints_POS_V = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[txtDestination][tableOfNameOfCities]"
                                                                           options:0
                                                                           metrics:nil

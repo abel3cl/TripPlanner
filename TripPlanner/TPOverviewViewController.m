@@ -227,8 +227,7 @@
                 if ([event isOpenForDay: dayOfWeek]) {
                     if(!inserted) {
                         if ([[arrayOfEventsPerDay objectAtIndex:i] count] == 0) {
-                            
-                        [[arrayOfEventsPerDay objectAtIndex:i] addObject:event];
+                            [[arrayOfEventsPerDay objectAtIndex:i] addObject:event];
                         inserted = YES;
                         break;
                         }

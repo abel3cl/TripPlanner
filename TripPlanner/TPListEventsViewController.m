@@ -79,12 +79,6 @@
     
     return cell;
 }
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    Event *event = (Event*)[[_actualTrip.events allObjects] objectAtIndex:indexPath.row];
-    NSSet *set = event.daysOpen;
-    
-}
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
