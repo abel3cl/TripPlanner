@@ -153,7 +153,7 @@
 
 #pragma mark - Save
 - (IBAction)btnSave:(id)sender {
-    // Place from the table selected
+    // Selected place from the table
     if (placeDestination) {
         NSString *placeID = [placeDestination valueForKey:@"place_id"];
 

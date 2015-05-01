@@ -81,7 +81,6 @@
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Trip" inManagedObjectContext:managedObjectContext];
     [fetchRequest setEntity:entity];
     
-    /// Passing sectionNameKeyPath, it groups by "category"
     NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:managedObjectContext sectionNameKeyPath:@"destination" cacheName:@"Root"];
    
     NSError *error = nil;
@@ -133,7 +132,6 @@
     // Set Hours
     NSMutableSet *setOfDaysOpen = [NSMutableSet set];
     NSArray *periods = [periodsM copy];
-    //NSArray *periodsL = [[event valueForKey:@"opening_hours"] valueForKey:@"periods"];
     
     for (int index = 0; index < 7; index++) {
         DayOpen* dayOpenEntity = (DayOpen*)[NSEntityDescription insertNewObjectForEntityForName:@"DayOpen" inManagedObjectContext:managedObjectContext];
