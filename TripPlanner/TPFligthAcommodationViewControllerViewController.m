@@ -97,6 +97,7 @@
     [textField resignFirstResponder];
     return YES;
 }
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [txtPriceFligth resignFirstResponder];

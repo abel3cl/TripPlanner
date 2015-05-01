@@ -64,12 +64,7 @@
     webServiceController = ((AppDelegate*) [UIApplication sharedApplication].delegate).webServiceController;
    
     // Initializate values
-    eventsInLocalCurrency = 0.0;
-    eventsInMyCurrency = 0.0;
-    fligthAcommodationInLocalCurrency = 0.0;
-    fligthAcommodationInMyCurrency = 0.0;
-    totalInLocalCurrency = 0.0;
-    totalInMyCurrency = 0.0;
+
 
     [webServiceController getExchanges];
 }
@@ -77,6 +72,18 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    eventsInLocalCurrency = 0.0;
+    eventsInMyCurrency = 0.0;
+    fligthAcommodationInLocalCurrency = 0.0;
+    fligthAcommodationInMyCurrency = 0.0;
+    totalInLocalCurrency = 0.0;
+    totalInMyCurrency = 0.0;
+    [viewLayer setHidden:NO];
+    [btnGenerate setHidden:NO];
 }
 
 #pragma mark - Generate Budget Methods
@@ -275,24 +282,18 @@
                 }
             }
         }
-        // Event has no dates inserted
+        // Event without dates - not possible to schedule
         if(!inserted)
         {
             [[arrayOfEventsPerDay objectAtIndex:[arrayOfEventsPerDay count] -1] addObject:event];
         }
     }
-    
-    [self sortArrays];
 }
--(void) sortArrays
-{
 
-    
-}
 #pragma mark - UITableViewDataSource & Delegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [arrayOfDaysAvailable count] +1;
+    return [arrayOfDaysAvailable count] +1; // add the last section 
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -316,6 +317,7 @@
 }
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
+    // the last section contains events that they're not possible to schedule
     if (section > [arrayOfDaysAvailable count] - 1) {
         return @"Not possible to schedule this events";
     } else {

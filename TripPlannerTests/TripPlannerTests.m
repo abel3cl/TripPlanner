@@ -44,7 +44,7 @@
 {
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     
-    // Example Event
+    // Mock Event
     Event *eventEntity = (Event*)[NSEntityDescription insertNewObjectForEntityForName:@"Event" inManagedObjectContext:appDelegate.managedObjectContext];
     DayOpen* dayOpenEntity = (DayOpen*)[NSEntityDescription insertNewObjectForEntityForName:@"DayOpen" inManagedObjectContext:appDelegate.managedObjectContext];
     

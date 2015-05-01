@@ -68,7 +68,6 @@
     if(![managedObjectContext save:&error])
     {
         NSLog(@"Unresolved error %@, %@",error, [error localizedDescription]);
-        exit(-1);
     }
 }
 
@@ -90,7 +89,6 @@
     if(![fetchedResultsController performFetch:&error])
     {
         NSLog(@"Unresolved error %@, %@",error, [error localizedDescription]);
-        exit(-1);
     }
     
     return fetchedResultsController.fetchedObjects;
@@ -193,7 +191,7 @@
             [setOfDaysOpen addObject:dayOpenEntity];
         }      
     }
-    
+    // add the hours to the event
     eventEntity.daysOpen = setOfDaysOpen;
     
     NSError *errorSaving = nil;
@@ -202,6 +200,7 @@
     {
         NSLog(@"Error saving event %@ %@", errorSaving, [errorSaving localizedDescription]);
     }
+    // call back, the completion block to show the aler in the view
     callback();
 }
 
@@ -229,20 +228,24 @@
 
 -(void) deleteEventInCalendar: (Trip*) trip
 {
-    EKEventStore *store = [[EKEventStore alloc] init];
-    [store requestAccessToEntityType:EKEntityTypeEvent
+    // Check if the user is allowed to use the calendar
+    if (EKAuthorizationStatusAuthorized)
+    {
+        EKEventStore *store = [[EKEventStore alloc] init];
+        [store requestAccessToEntityType:EKEntityTypeEvent
                           completion:^(BOOL granted, NSError *error) {
                               
-        if (!granted) {
+            if (!granted) {
                 return;
-        }
+            }
                               
-        NSError *err = nil;
-                              
-        NSPredicate *predicate = [store predicateForEventsWithStartDate:trip.startDate endDate:trip.endDate calendars:[NSArray arrayWithObject:store.defaultCalendarForNewEvents]];
-        EKEvent *event  = [[store eventsMatchingPredicate:predicate] firstObject];
-        [store removeEvent:event span:EKSpanThisEvent commit:YES error:&err];
-    }];
+            NSError *err = nil;
+            // search for the specific event
+            NSPredicate *predicate = [store predicateForEventsWithStartDate:trip.startDate endDate:trip.endDate calendars:[NSArray arrayWithObject:store.defaultCalendarForNewEvents]];
+            EKEvent *event  = [[store eventsMatchingPredicate:predicate] firstObject];
+            [store removeEvent:event span:EKSpanThisEvent commit:YES error:&err];
+        }];
+    }
 
 }
 

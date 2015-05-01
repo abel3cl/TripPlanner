@@ -245,6 +245,7 @@
 
 - (IBAction)btnAdd:(id)sender
 {
+    // in production version, we'd control this input
     NSString *hourOpeningMorningSelected =  txtHourOpeningMorningOfPoint.text;
     NSString *hourClosingMorningSelected =  txtHourClosingMorningOfPoint.text;
     NSString *hourOpeningEveningSelected =  txtHourOpeningEveningOfPoint.text;
