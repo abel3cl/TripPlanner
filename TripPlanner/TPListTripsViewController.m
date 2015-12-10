@@ -138,5 +138,9 @@
         [TPFligthAcommodationViewControllerVC setActualTrip:[arrayOfTrips objectAtIndex:indexPath.section]];
     }
 }
+- (IBAction)btnSettings:(id)sender {
+   
+    [[UIApplication sharedApplication] openURL: [NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+}
 
 @end

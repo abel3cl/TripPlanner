@@ -43,6 +43,7 @@
 		B51B613B1AEFA4DB00D85D29 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B611E1AEFA4DB00D85D29 /* Trip.m */; };
 		B51B613C1AEFA4DB00D85D29 /* TripPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B51B611F1AEFA4DB00D85D29 /* TripPlanner.xcdatamodeld */; };
 		B51B613D1AEFA4DB00D85D29 /* WebServiceConnectionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B61221AEFA4DB00D85D29 /* WebServiceConnectionsController.m */; };
+		B5640AEB1C184D83008A2F8A /* TripPlannerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5640AEA1C184D83008A2F8A /* TripPlannerUITests.m */; };
 		B59414C91AEFA92100F31D5C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B51B60D81AEFA2C000D85D29 /* MainInterface.storyboard */; };
 		B59414CA1AEFA92E00F31D5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B51B60E91AEFA4C200D85D29 /* Main.storyboard */; };
 		B5F9DB831AEFC9660018CE9E /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B60D61AEFA2C000D85D29 /* TodayViewController.m */; };
@@ -65,6 +66,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = B51B60CD1AEFA2BF00D85D29;
 			remoteInfo = TripPlannerWidget;
+		};
+		B5640AED1C184D83008A2F8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B51B60951AEFA29A00D85D29 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B51B609C1AEFA29A00D85D29;
+			remoteInfo = TripPlanner;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -153,6 +161,9 @@
 		B51B61201AEFA4DB00D85D29 /* TripPlanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TripPlanner.xcdatamodel; sourceTree = "<group>"; };
 		B51B61211AEFA4DB00D85D29 /* WebServiceConnectionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceConnectionsController.h; sourceTree = "<group>"; };
 		B51B61221AEFA4DB00D85D29 /* WebServiceConnectionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceConnectionsController.m; sourceTree = "<group>"; };
+		B5640AE81C184D83008A2F8A /* TripPlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripPlannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5640AEA1C184D83008A2F8A /* TripPlannerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TripPlannerUITests.m; sourceTree = "<group>"; };
+		B5640AEC1C184D83008A2F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +189,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5640AE51C184D83008A2F8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -187,6 +205,7 @@
 				B51B609F1AEFA29A00D85D29 /* TripPlanner */,
 				B51B60BC1AEFA29A00D85D29 /* TripPlannerTests */,
 				B51B60D21AEFA2BF00D85D29 /* TripPlannerWidget */,
+				B5640AE91C184D83008A2F8A /* TripPlannerUITests */,
 				B51B60CF1AEFA2BF00D85D29 /* Frameworks */,
 				B51B609E1AEFA29A00D85D29 /* Products */,
 			);
@@ -198,6 +217,7 @@
 				B51B609D1AEFA29A00D85D29 /* TripPlanner.app */,
 				B51B60B91AEFA29A00D85D29 /* TripPlannerTests.xctest */,
 				B51B60CE1AEFA2BF00D85D29 /* TripPlannerWidget.appex */,
+				B5640AE81C184D83008A2F8A /* TripPlannerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -385,6 +405,15 @@
 			name = PointOfInterest;
 			sourceTree = "<group>";
 		};
+		B5640AE91C184D83008A2F8A /* TripPlannerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B5640AEA1C184D83008A2F8A /* TripPlannerUITests.m */,
+				B5640AEC1C184D83008A2F8A /* Info.plist */,
+			);
+			path = TripPlannerUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -442,6 +471,24 @@
 			productReference = B51B60CE1AEFA2BF00D85D29 /* TripPlannerWidget.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		B5640AE71C184D83008A2F8A /* TripPlannerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5640AF11C184D83008A2F8A /* Build configuration list for PBXNativeTarget "TripPlannerUITests" */;
+			buildPhases = (
+				B5640AE41C184D83008A2F8A /* Sources */,
+				B5640AE51C184D83008A2F8A /* Frameworks */,
+				B5640AE61C184D83008A2F8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5640AEE1C184D83008A2F8A /* PBXTargetDependency */,
+			);
+			name = TripPlannerUITests;
+			productName = TripPlannerUITests;
+			productReference = B5640AE81C184D83008A2F8A /* TripPlannerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -458,6 +505,9 @@
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
 							};
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 						};
 					};
 					B51B60B81AEFA29A00D85D29 = {
@@ -472,6 +522,10 @@
 								enabled = 1;
 							};
 						};
+					};
+					B5640AE71C184D83008A2F8A = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = B51B609C1AEFA29A00D85D29;
 					};
 				};
 			};
@@ -491,6 +545,7 @@
 				B51B609C1AEFA29A00D85D29 /* TripPlanner */,
 				B51B60B81AEFA29A00D85D29 /* TripPlannerTests */,
 				B51B60CD1AEFA2BF00D85D29 /* TripPlannerWidget */,
+				B5640AE71C184D83008A2F8A /* TripPlannerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -523,6 +578,13 @@
 				B5F9DB841AEFC97D0018CE9E /* TripPlanner.xcdatamodeld in Resources */,
 				B51B60D91AEFA2C000D85D29 /* MainInterface.storyboard in Resources */,
 				B59414CA1AEFA92E00F31D5C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5640AE61C184D83008A2F8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +643,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5640AE41C184D83008A2F8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5640AEB1C184D83008A2F8A /* TripPlannerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -593,6 +663,11 @@
 			isa = PBXTargetDependency;
 			target = B51B60CD1AEFA2BF00D85D29 /* TripPlannerWidget */;
 			targetProxy = B51B60DA1AEFA2C000D85D29 /* PBXContainerItemProxy */;
+		};
+		B5640AEE1C184D83008A2F8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B51B609C1AEFA29A00D85D29 /* TripPlanner */;
+			targetProxy = B5640AED1C184D83008A2F8A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -782,6 +857,37 @@
 			};
 			name = Release;
 		};
+		B5640AEF1C184D83008A2F8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = TripPlannerUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TAE.Abel.TripPlannerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TripPlanner;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		B5640AF01C184D83008A2F8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = TripPlannerUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.TAE.Abel.TripPlannerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TripPlanner;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -820,6 +926,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		B5640AF11C184D83008A2F8A /* Build configuration list for PBXNativeTarget "TripPlannerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5640AEF1C184D83008A2F8A /* Debug */,
+				B5640AF01C184D83008A2F8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
